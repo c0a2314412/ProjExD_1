@@ -24,16 +24,17 @@ def main():
         screen.blit(bg_img2,[-x+1600,0])#7-1
         screen.blit(bg_img, [-x, 0])#6
         screen.blit(bg_img,[-x+3200,0])#7-2
+        tori_rct.move_ip((-1,0))#e1
         key_lst = pg.key.get_pressed()#8-3
         if key_lst[pg.K_UP]:#8-4
             tori_rct.move_ip((0,-1))#8-4
         if key_lst[pg.K_DOWN]:#8-4
             tori_rct.move_ip((0,1))#8-4
         if key_lst[pg.K_RIGHT]:#8-4
-            tori_rct.move_ip((1,0))#8-4
+            tori_rct.move_ip((2,0))#8-4 #e1 
         if key_lst[pg.K_LEFT]:#8-4
             tori_rct.move_ip((-1,0))#8-4
-        screen.blit(tori,tori_rct)#4 #8-5
+        screen.blit(tori,tori_rct)#4 #8-5 #e1
         pg.display.update()
         tmr += 1        
         clock.tick(200)#5
