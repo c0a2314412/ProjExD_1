@@ -7,6 +7,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def main():
     pg.display.set_caption("はじめてのPygame")
+    img =pg.image.load("fig/3.png")
+
     screen = pg.display.set_mode((800, 600))
     clock = pg.time.Clock()
     font = pg.font.Font(None, 80)
@@ -24,9 +26,10 @@ def main():
         screen.fill((50, 50, 50))
         screen.blit(txt, [300, 200])
         screen.blit(enn, [100, 400])
+        screen.blit(img,[400,200])
         pg.display.update()
         tmr += 1        
-        clock.tick(1)
+        clock.tick(2)
 
 
 if __name__ == "__main__":
